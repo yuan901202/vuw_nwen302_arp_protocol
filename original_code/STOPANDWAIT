@@ -1,0 +1,48 @@
+compile        = "stopandwait.c ethernet.c ip.c arp.c"
+
+minmessagesize = 128bytes
+maxmessagesize = 512bytes
+messagerate    = 1s
+
+lansegment LAN {
+    lan-bandwidth  = 10Mbps
+    x=50, y=100
+}
+
+host Wellington {
+    lan to LAN { nicaddr = 00:90:27:41:B0:BE }
+}
+
+host Auckland {
+    lan to LAN { nicaddr = 01:90:27:62:58:84 }
+}
+
+host Gisborne {
+    lan to LAN { nicaddr = 02:20:58:12:07:37 }
+}
+
+/*
+host Rotorua {
+    lan to LAN { nicaddr = 03:8C:E6:3B:36:63 }
+}
+
+host Hamilton {
+    lan to LAN { nicaddr = 04:F7:4E:C5:7F:32 }
+}
+
+host Christchurch {
+    lan to LAN { nicaddr = 05:A0:C9:AF:9E:81 }
+}
+
+host Queenstown {
+    lan to LAN { nicaddr = 06:EB:26:50:38:7D }
+}
+
+host Dunedin {
+    lan to LAN { nicaddr = 07:88:B6:09:09:AB }
+}
+
+host Invercargill {
+    lan to LAN { nicaddr = 08:3B:AF:D2:AA:53 }
+}
+*/

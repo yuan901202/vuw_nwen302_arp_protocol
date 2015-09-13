@@ -10,6 +10,21 @@ A network simulation environment cnet which has been developed for communication
 ## How to running it?
 $ cnet –g –O STOPANDWAIT
 
+## Files changed:
+- arp.c
+   - add arp packet and arp table structure
+   - handle arp packet and deal with arp table entry
+- ethernet.c
+   - forward Ethernet packet to my code
+- ethernet.h
+   - add Ethernet packet structure
+- ip.c
+   - add necessary method to deal with ip address
+- ip.h
+   - add prototypes
+- stopandwait.c
+   - add timeout method
+
 ## What this program can do?
 Roughly speaking, your ARP component will need to do (at least) the following:
 
